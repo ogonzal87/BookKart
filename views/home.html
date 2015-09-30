@@ -1,0 +1,23 @@
+
+<div class="container">
+
+  <form role="form">
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="Search Here...." ng-model="search" />
+    </div>
+  </form>
+
+  <div>
+    <ul class="list-unstyled" >
+      <li ng-repeat="book in books | filter:search:book.name">
+        <div class="book">
+          <h3> {{ book.name }} </h3>
+          <p>{{ book.price }}</p>
+        </div>
+        <button class="btn btn-info pull-right" ng-click="addToKart(book)">Add to Kart</button>
+      </li>
+    </ul>
+  </div>
+
+
+</div>

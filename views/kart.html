@@ -1,0 +1,14 @@
+
+<div class="container">
+  <div>
+    <ul class="list-unstyled" >
+      <li ng-repeat="book in kart">
+        <div class="book">
+          <h3> {{ book.name }} </h3>
+          <p>{{ book.price }}</p>
+        </div>
+        <button class="btn btn-info pull-right" ng-click="buyBook(book)">Buy</button>
+      </li>
+    </ul>
+  </div>
+</div>
